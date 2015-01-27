@@ -16,6 +16,7 @@ class Gkrellm < Formula
   depends_on 'glib'
   depends_on 'gtk+'
   depends_on 'pango'
+  depends_on 'openssl'
 
   patch :p0 do
     url "https://trac.macports.org/export/115088/trunk/dports/sysutils/gkrellm/files/207a0519ac73290ba65b6e5f7446549a2a66f5d2.patch"
