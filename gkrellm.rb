@@ -31,9 +31,9 @@ class Gkrellm < Formula
     inreplace 'Makefile', '$(PREFIX)', prefix
     inreplace 'src/gkrellm.h' do |s|
       s.gsub! '/usr/local/share/gkrellm2/themes', "#{share}/gkrellm2/themes"
-      s.gsub! 'src/gkrellm.h', '/usr/share/gkrellm2/themes', "#{share}/gkrellm2/themes"
-      s.gsub! 'src/gkrellm.h', '/usr/local/lib/gkrellm2/plugins', "#{libexec}/gkrellm2/plugins"
-      s.gsub! 'src/gkrellm.h', '/usr/lib/gkrellm2/plugins', "#{libexec}/gkrellm2/plugins"
+      s.gsub! '/usr/share/gkrellm2/themes', "#{share}/gkrellm2/themes"
+      s.gsub! '/usr/local/lib/gkrellm2/plugins', "#{libexec}/gkrellm2/plugins"
+      s.gsub! '/usr/lib/gkrellm2/plugins', "#{libexec}/gkrellm2/plugins"
     end
 
     system "make", "darwin9"
